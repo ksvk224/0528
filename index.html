@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .visual {
+            background-image: url(./img1/배경.png)
+        }
+        .visual .inner {
+            width: 1600px;
+            margin: 0 auto;
+            height: 646px;
+            position: relative;
+        }
+        .visual .title {
+            position: absolute;
+            top: 88px;
+            left: -10px;
+        }
+        .visual .rabbit1 .image{
+            position: absolute;
+            width: 400px;
+            margin-top: 290px;
+        }
+        .visual .rabbit1 .text1{
+            position: absolute;
+            top: -40px;
+            right: 900px;
+            width: 300px;
+            height: 200px;
+            margin-top: 450px;
+        }
+        .visual .rabbit2 .image2{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 250px;
+            left: 700px;
+        }
+        .visual .rabbit2 .text2{
+            position: absolute;
+            top: -40px;
+            right: 190px;
+            width: 300px;
+            height: 200px;
+            margin-top: 450px;
+        }
+        .visual .logo{
+            width: 400px;
+            position: absolute;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section class="visual">
+        <div class="inner">
+            <div class="title fade-in">
+                <img src="./img1/logo.png" alt="" class="logo">
+            </div>
+            <div class="rabbit1 fade-in">
+                <img src="./img1/pngwing.com (48).png" alt="" class="image">
+                <img src="./img1/text1.png" alt="" class="text1">
+            </div>
+            <div class="rabbit2 fade-in">
+                <img src="./img1/pngwing.com (49).png" alt="" class="image2">
+                <img src="./img1/text2.png" alt="" class="text2">
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        const fadeEls = document.querySelectorAll('.visual .fade-in');
+        gsap.from(fadeEls, {
+            duration: 5,
+            scale: .3,
+            ease:'bounce.out',
+            opacity: 0,
+            stagger: 0.7
+        })
+    </script>
+</body>
+</html>
